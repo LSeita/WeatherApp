@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 export default function parseInfo(res) {
-  console.log(res);
   const { name } = res.location;
   const { country } = res.location;
   const { temp_c } = res.current;
