@@ -9,24 +9,34 @@
   </head>
   <body>
     <div id="container">
-      <form action="" id="form">
-        <input id="localInput" type="text" placeholder="Digite um local" />
-        <button id="btn">Pesquisar</button>
-      </form>
-      <span id="local"></span>
-      <span id="date"></span>
+      <div id="header">
+        <form action="" id="form">
+          <input id="localInput" type="text" placeholder="Digite um local" />
+          <button id="btn">Pesquisar</button>
+        </form>
+        <span id="local"></span>
+        <span id="date"></span>
+      </div>
       <div class="current-container">
         <div id="current-temp">
           <div class="img-container">
             <img id="crnt-img" src="" alt="" />
           </div>
-          <div class="info-container">
+          <div id="crnt-info" class="info-container">
             <span id="crntTemp"></span>
-            <span id="details"></span>
+            <span id="feels"></span>
+            <span id="temps"></span>
           </div>
         </div>
-        <div class="current-details">
-          <h1>TESTE</h1>
+        <div id="current-details">
+          <div class="detail">
+            <span id="humidity"></span>
+            <span id="uv"></span>
+          </div>
+          <div class="detail">
+            <span id="wind"></span>
+            <span id="precip"></span>
+          </div>
         </div>
       </div>
       <div class="future-container">

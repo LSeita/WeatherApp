@@ -6,6 +6,10 @@ export default function parseInfo(res) {
   const { temp_c } = res.current;
   const { feelslike_c } = res.current;
   const { icon } = res.current.condition;
+  const { humidity } = res.current;
+  const { wind_kph } = res.current;
+  const { uv } = res.current;
+  const { precip_mm } = res.current;
   const forecast = [];
   for (let i = 0; i < 3; i += 1) {
     const { date } = res.forecast.forecastday[i];
@@ -22,8 +26,12 @@ export default function parseInfo(res) {
     country,
     temp_c,
     feelslike_c,
-    forecast,
     icon,
+    humidity,
+    uv,
+    wind_kph,
+    precip_mm,
+    forecast,
   };
   return location;
 }
