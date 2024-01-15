@@ -6,9 +6,14 @@ import "./style.css";
 
 const input = document.getElementById("localInput");
 const btn = document.getElementById("btn");
+const overlay = document.getElementById("overlay");
 
 // Calls the API with the desired place
 btn.addEventListener("click", (e) => {
-  getInfo(input.value).then((res) => displayWeather(parseInfo(res)));
+  overlay.style.display = "block";
+  getInfo(input.value).then((res) => {
+    overlay.style.display = "none";
+    displayWeather(parseInfo(res));
+  });
   e.preventDefault();
 });
